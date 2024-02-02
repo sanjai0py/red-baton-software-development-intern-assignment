@@ -1,0 +1,16 @@
+{
+  "name": "red-baton-software-development-intern-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hn-scraper.js",
+  "scripts": {
+    "start": "node hn-scraper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.10.0"
+  }
+}
