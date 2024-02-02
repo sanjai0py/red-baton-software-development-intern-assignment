@@ -1,39 +1,42 @@
-const Article = (sequelize, DataTypes) => {
+const ArticleModel = (sequelize, DataTypes) => {
   const article = sequelize.define("Article", {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.BIGINT,
       autoIncrement: true,
-      defaultValue: DataTypes.UUIDV4,
+      required: true,
       primaryKey: true,
     },
-    hnid: {
-      type: String,
+    title: {
+      type: DataTypes.STRING,
       required: true,
     },
-    title: {
-      type: String,
+    upvotes: {
+      type: DataTypes.INTEGER,
       required: true,
     },
     link: {
-      type: String,
+      type: DataTypes.STRING,
       unique: true,
       required: true,
     },
+    hnUrl: {
+      type: DataTypes.STRING,
+      required: true,
+    },
     saved: {
-      type: Boolean,
+      type: DataTypes.BOOLEAN,
       default: false,
     },
     deleted: {
-      type: Boolean,
+      type: DataTypes.BOOLEAN,
       default: false,
     },
-    date: {
-      type: Integer,
-      default: Date.now,
+    age: {
+      type: DataTypes.BIGINT,
     },
   });
 
   return article;
 };
 
-module.exports = Article;
+module.exports = { ArticleModel };
