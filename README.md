@@ -17,7 +17,8 @@
      - [Fields](#fields-2)
    - [UserArticle Model](#userarticles-model)
      - [Fields](#fields)
-6. [Error Codes](#errors)
+6. [ERD](#erd)
+7. [Error Codes](#errors)
 
 ## Introduction
 
@@ -106,6 +107,10 @@ The `UserArticles` model manages the many-to-many relationship between users and
 - `articleId`: Foreign key linking to the `Article` model.
 - `markAsRead`: Boolean indicating if the user marked the article as read.
 - `markedAsDeleted`: Boolean indicating if the user marked the article as deleted.
+
+### ERD
+
+![erd](https://i.ibb.co/t3TWr43/mirrar-public.png)
 
 ## Errors
 
