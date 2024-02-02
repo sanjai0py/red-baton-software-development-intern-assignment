@@ -28,6 +28,7 @@ sequelize
 
 const Article = ArticleModel(sequelize, DataTypes);
 const User = UserModel(sequelize, DataTypes);
+const UserArticles = UserArticleModel(sequelize, DataTypes);
 
 // User relationships
 User.belongsToMany(Article, {

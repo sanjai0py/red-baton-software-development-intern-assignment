@@ -15,11 +15,9 @@ protected = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     req.user = await User.findOne({
-      attributes: ["secretImg"],
-      where: {
-        id: decoded.id,
-      },
+      where: { id: decoded.id },
     });
+
     next();
   } catch (err) {
     next({

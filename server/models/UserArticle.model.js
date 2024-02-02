@@ -1,4 +1,4 @@
-const UserArticles = (sequelize, DataTypes) => {
+const UserArticleModel = (sequelize, DataTypes) => {
   const UserArticles = sequelize.define("UserArticles", {
     markAsRead: {
       type: DataTypes.BOOLEAN,
@@ -13,4 +13,4 @@ const UserArticles = (sequelize, DataTypes) => {
   return UserArticles;
 };
 
-module.exports = { UserArticles };
+module.exports = { UserArticleModel };

@@ -1,6 +1,6 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
-require("dotenv").config();
 const cors = require("cors");
 
 const { protected } = require("./middlewares/authHandler");
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("api/v1/auth", authRoute);
-// app.use("api/v1/dashboard", protected, dashboardRoute);
+app.use("api/v1/dashboard", protected, dashboardRoute);
 
 async function runMigration() {
   try {
